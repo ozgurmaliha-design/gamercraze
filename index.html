@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GamerCraze - Latest Roblox Scripts & Tools</title>
+    <meta name="description" content="Discover the latest Roblox scripts and tools. Browse, search, and download scripts with live updates every 60 seconds.">
+    <meta name="keywords" content="roblox scripts, gamercraze, roblox tools, lua scripts, gaming scripts">
+    <meta name="author" content="GamerCraze">
+    <meta property="og:title" content="GamerCraze - Latest Roblox Scripts">
+    <meta property="og:description" content="Discover the latest Roblox scripts and tools with live updates.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://gamercraze.site/">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- AdSense Top Banner - Hidden until ads are configured -->
+    <!-- <div class="ad-banner ad-top">
+        <div class="ad-placeholder">AdSense Banner - 728x90</div>
+    </div> -->
+
+    <main class="app" role="main">
+        <header>
+            <div>
+                <h1>GamerCraze</h1>
+                <p>Discover the latest Roblox scripts and tools — new content appears with live updates.</p>
+            </div>
+            <div class="header-right">
+                <div class="badge" id="newCountBadge" style="display:none">0 new</div>
+            </div>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search scripts by title..." class="search-input">
+                <button id="clearSearch" class="btn small" style="display:none">Clear</button>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn primary" id="refreshBtn">
+                <span class="btn-text">Refresh Now</span>
+                <span class="loading-spinner" style="display:none"></span>
+            </button>
+            <button class="btn small" id="toggleAutorefresh">Auto-refresh: ON</button>
+
+            <label class="interval-label">
+                Poll interval
+                <select id="intervalSelect" class="btn small interval-select">
+                    <option value="900">15m</option>
+                    <option value="1800">30m</option>
+                    <option value="3600" selected>1h</option>
+                    <option value="7200">2h</option>
+                </select>
+            </label>
+
+            <div id="status">Page: <span id="currentPage">1</span> · Total pages: <span id="maxPages">?</span></div>
+        </div>
+
+        <!-- AdSense Mid Content - Hidden until ads are configured -->
+        <!-- <div class="ad-banner ad-mid">
+            <div class="ad-placeholder">AdSense Rectangle - 336x280</div>
+        </div> -->
+
+        <section class="scripts-section">
+            <div id="scriptsGrid" class="grid"></div>
+            <div id="noResults" class="no-results" style="display:none">
+                <h3>No scripts found</h3>
+                <p>Try adjusting your search terms or clear the search to see all scripts.</p>
+            </div>
+        </section>
+
+        <div class="pagination">
+            <button class="btn" id="prevPage">← Previous</button>
+            <button class="btn" id="nextPage">Next →</button>
+        </div>
+
+        <!-- AdSense Bottom - Hidden until ads are configured -->
+        <!-- <div class="ad-banner ad-bottom">
+            <div class="ad-placeholder">AdSense Banner - 728x90</div>
+        </div> -->
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GamerCraze</h4>
+                    <p>Your go-to source for the latest Roblox scripts and tools, automatically updated with fresh content.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul>
+                        <li>Auto-refresh every 60 seconds</li>
+                        <li>Search & filter functionality</li>
+                        <li>Mobile responsive design</li>
+                        <li>Direct raw file access</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> GamerCraze. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
